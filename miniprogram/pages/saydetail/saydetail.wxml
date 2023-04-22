@@ -1,0 +1,17 @@
+<view class="cu-card article no-card margin-top" wx:for="{{data}}" data-item="{{item}}"  bindtap="toDetail">
+  <view class="cu-item shadow">
+    <view class="title">
+      <view class="text-cut">{{item.type==1?'寻物':'寻主'}}:{{item.name}}</view>
+    </view>
+    <view class="content">
+      <image src="{{item.imgList[0]}}" mode="aspectFill"></image>
+      <view class="desc">
+        <view class="text-content"> {{item.desc}}</view>
+        <view>
+          <view class="cu-tag  light sm round">{{item.date}}</view>
+          <view class="cu-tag bg-green light sm round">史诗</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

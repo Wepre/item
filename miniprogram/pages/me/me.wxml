@@ -1,0 +1,30 @@
+<view class="body">
+    <!-- <view class="unlogin-body" >
+        <view class="unlogin">
+            <image class="unlogin-image" src="../../images/me.png"></image>
+            <button class="unlogin-btn" open-type="getUserInfo" bindtap="toLogin">微信一键登录</button>
+        </view>
+    </view> -->
+
+    <view class="login">
+
+        <view class="info">
+
+            <image class="avatarUrl" src="{{res.image}}"></image>
+            <text class="nickName">{{ res.name }}</text>
+        </view>
+        <view class="cell-body">
+            <view class="cell-list">
+                <view class="cell" wx:for="{{ cellList }}" wx:key="index" data-page="{{ item.page }}" bindtap="toDetail">
+                    <view class="cell-left">
+                        <image class="cell-left-image" src="{{ item.url }}"></image>
+                        <text class="cell-left-text">{{ item.text }}</text>
+                    </view>
+                    <view class="cell-right">
+                        <image class="cell-right-image" src="../../images/dayu.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

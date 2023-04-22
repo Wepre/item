@@ -1,0 +1,78 @@
+.banner {
+    height: 55vh;
+}
+
+.banner-image {
+    width: 100%;
+    height: 55vh;
+}
+
+.name {
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding: 20rpx;
+    font-weight: bold;
+}
+
+.container {
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.container .item {
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.container .item .label {
+    width: 70rpx;
+    color: #999999;
+    font-size: 26rpx;
+    margin-right: 20rpx;
+}
+
+.bottom {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    margin-top: 20rpx;
+    padding: 20rpx 40rpx;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    bottom: 20rpx;
+}
+
+.bottom .bottom-left {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 30rpx;
+    padding: 10rpx;
+    width: 70%;
+    color: #999999;
+}
+
+.bottom .bottom-left .icon-comment {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+
+.bottom .bottom-right .icon-collection {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.bottom .bottom-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body {
+    position: relative;
+    padding-bottom: 160rpx;
+}

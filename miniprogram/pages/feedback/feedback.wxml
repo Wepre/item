@@ -1,0 +1,57 @@
+<wxs module="test">
+    function getname(arr, index) {
+        return arr[index]
+    }
+    function getimage(arr, index) {
+        var image=arr[index]
+        return image[0]
+    }
+    module.exports = {
+        getname: getname,
+        getimage: getimage,
+    }
+</wxs>
+<view class="bg-white">
+    <view class="cu-bar">
+        <view class="text-black text-xxl padding-lr-sm">
+            全部留言
+        </view>
+    </view>
+    <view class="cu-list menu-avatar padding" wx:for="{{list}}">
+        <view class="cu-item">
+            <image class="cu-avatar round lg" src="{{test.getimage(imagelist,item.userid)}}" mode="" />
+            <view class="content">
+                <view class="text-lg text-bold">
+                    {{test.getname(namelist,item.userid)}}
+                </view>
+
+            </view>
+
+        </view>
+        <view class="margin-left-sm padding-left text-black">
+            <view class="margin-lr-sm padding-left">
+                <text>{{item.content}}</text>
+            </view>
+
+        </view>
+    </view>
+
+
+</view>
+<view style="height: 200rpx;">
+    
+</view>
+<!-- 底部评论 -->
+<view class="cu-bar fixed input {{InputBottom!=0?'cur':''}}" style="width: 100%; position: fixed; left: 0rpx; top: 987rpx">
+    <view class="action">
+        <text class="cuIcon-write text-gray"></text>
+    </view>
+
+    <input class="solid-bottom" bindconfirm="submit" placeholder="写留言" bindinput="input" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+
+    <view class="action">
+        <text class="cuIcon-comment text-black"></text>
+
+    </view>
+
+</view>

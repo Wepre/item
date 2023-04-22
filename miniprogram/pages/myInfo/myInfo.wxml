@@ -1,0 +1,44 @@
+<view class="cu-bar bg-white margin-top">
+    <view class="action">
+        头像上传
+    </view>
+    <view class="action">
+        {{imgUrl.length}}/{{num}}
+    </view>
+</view>
+<view class="cu-form-group">
+    <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgUrl}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgUrl[index]}}">
+            <image src='{{imgUrl[index]}}' mode='aspectFill'></image>
+            <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                <text class="cuIcon-close"></text>
+            </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage" wx:if="{{imgUrl.length<num}}">
+            <text class="cuIcon-cameraadd"></text>
+        </view>
+    </view>
+</view>
+<form bindsubmit="submit">
+
+    <view class="cu-form-group ">
+        <view class="title">姓名</view>
+        <input placeholder="请输入姓名" value="{{res.name}}" name='name'></input>
+    </view>
+    <view class="cu-form-group ">
+        <view class="title">手机号</view>
+        <input placeholder="请输入手机号" value="{{res.phone}}" name='phone'></input>
+    </view>
+        <!-- <view class="cu-form-group ">
+            <view class="title">密码</view>
+            <input placeholder="请输入密码" value="{{res.password}}" name='password'></input>
+        </view> -->
+
+    <view class="box bg-white margin-sm radius-lg">
+        <view class="cu-bar btn-group">
+            <button class="cu-btn bg-orange shadow-blur round lg" form-type="submit">保存</button>
+        </view>
+
+    </view>
+
+</form>
